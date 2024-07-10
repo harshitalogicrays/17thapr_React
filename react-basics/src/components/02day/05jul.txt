@@ -1,0 +1,23 @@
+<input text="" placeholder="" id=""/> 
+
+
+container / wrapper - 
+<React.Fragment>
+</React.Fragment>
+
+import {Fragment} from 'react'
+<Fragment>
+</Fragment
+
+shorthand of React.Fragment
+<>
+</>
+
+=======================================
+props are read only 
+
+=====================================
+events - 
+==========================================
+github 
+state - 
