@@ -1,0 +1,30 @@
+state  - 
+
+function components - 16v
+readymade functions - hooks 
+useState() - react hook 
+
+
+condition in jsx -
+1. ternary operator - ?:
+
+{condition ? <>true</> : <>false</>}
+
+2. short circuit operator -  &&
+{condition && <>true</>}
+
+3. if else -
+if(){
+    return (<></>)
+}
+else {
+    return (<></>)
+}
+
+===========================================================
+form 
+image 
+form validations 
+===============================================
+list rendering - map 
+lifting the state up 

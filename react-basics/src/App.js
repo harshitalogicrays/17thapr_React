@@ -4,6 +4,9 @@ import Propsdemoinfun from "./components/01day/Propsdemoinfun";
 import Childrenprops from "./components/02day/Childrenprops";
 import EventDemoinfun from "./components/02day/EventDemoinfun";
 import Propsinfundemo from "./components/02day/Propsinfundemo";
+import CounterApp from "./components/03day/CounterApp";
+import StateDemo from "./components/03day/StateDemo";
+import TextBoxDemo from "./components/03day/TextBoxDemo";
 
 
 function App() {
@@ -28,7 +31,11 @@ function App() {
               <p>rhwkhtrkwh</p>
           </Childrenprops> */}
 
-            <EventDemoinfun/>
+            {/* <EventDemoinfun/> */}
+
+            {/* <CounterApp/> <hr/>
+            <StateDemo/> <hr/> */}
+            <TextBoxDemo/>
     </div>
   )
 }
