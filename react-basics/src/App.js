@@ -7,6 +7,8 @@ import Propsinfundemo from "./components/02day/Propsinfundemo";
 import CounterApp from "./components/03day/CounterApp";
 import StateDemo from "./components/03day/StateDemo";
 import TextBoxDemo from "./components/03day/TextBoxDemo";
+import Form1 from "./components/04day/Form1";
+import Form2 from "./components/04day/Form2";
 
 
 function App() {
@@ -35,7 +37,9 @@ function App() {
 
             {/* <CounterApp/> <hr/>
             <StateDemo/> <hr/> */}
-            <TextBoxDemo/>
+            {/* <TextBoxDemo/> */}
+            {/* <Form1/> */}
+            <Form2/>    
     </div>
   )
 }
