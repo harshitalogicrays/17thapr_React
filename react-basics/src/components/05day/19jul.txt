@@ -1,0 +1,5 @@
+inline css - 
+<h2 style={{color:'beige',backgroundColor:'GrayText'}}>Welcome to LRA</h2>
+     
+css file -
+import 'path'

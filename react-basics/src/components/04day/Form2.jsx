@@ -8,33 +8,46 @@ const Form2 = () => {
     let [cpwderr,setCpwderr]=useState('')
     let handleSubmit=async(e)=>{
         e.preventDefault()
+        let unameerr = checkuname()
+        let emailerr = checkemail()
+        let pwderr = checkpwd()
+        let cpwderr = checkcpwd()
+        if(unameerr && emailerr && pwderr && cpwderr){
+            alert("form submitted")
+        }
+        else e.preventDefault()
 }   
        
 
     let checkuname = ()=>{
         if(user.username==''){
            setUnamerr("Username is required")
+           return false
         }
-        else{setUnamerr("")}
+        else{setUnamerr("");return true}
     }
     let checkemail = ()=>{
+        let pattern=/^[\w\!\#\$\%\&\*\_\.]+\@[\w]+\.[a-zA-Z]{3}$/
         if(user.email==''){
-            setEmailerr("email is required")
+            setEmailerr("email is required");return false
         }
-        else{ setEmailerr("")}
+        else if(!pattern.test(user.email)){
+            setEmailerr("Invalid Email");return false
+        }
+        else{ setEmailerr("");return true}
     }
 
     let checkpwd = ()=>{
         if(user.password==''){
-            setPwderr("password is required")
+            setPwderr("password is required");return false
         }
-        else{ setPwderr("")}
+        else{ setPwderr("");return true}
     }
     let checkcpwd = ()=>{
         if(user.cpassword=='' || user.cpassword != user.password){
-            setCpwderr("password not match")
+            setCpwderr("password not match");return false
         }
-        else{ setCpwderr("")}
+        else{ setCpwderr("");return true}
     }
 
 

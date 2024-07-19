@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Firstclasscomp from "./components/01day/Firstclasscomp";
 import Firstfunctionalcomp from './components/01day/Firstclasscomp'
 import Propsdemoinfun from "./components/01day/Propsdemoinfun";
@@ -14,9 +15,9 @@ import Form2 from "./components/04day/Form2";
 function App() {
   return (
     <div className="container mt-5">
-        {/* <h1 className="text-danger">Hello React</h1>
-        <h2>Welcome to LRA</h2>
-        <hr></hr>
+        <h1 className="text-danger">Hello React</h1>
+        <h2 style={{color:'beige',backgroundColor:'GrayText'}}>Welcome to LRA</h2>
+        {/* <hr></hr>
         <Firstfunctionalcomp/><hr/>
         <Firstclasscomp/> */}
 
@@ -35,11 +36,13 @@ function App() {
 
             {/* <EventDemoinfun/> */}
 
-            {/* <CounterApp/> <hr/>
+            {/* <CounterApp/> <hr/>/
             <StateDemo/> <hr/> */}
             {/* <TextBoxDemo/> */}
             {/* <Form1/> */}
-            <Form2/>    
+            {/* <Form2/>     */}
+
+            <Outlet/>
     </div>
   )
 }
