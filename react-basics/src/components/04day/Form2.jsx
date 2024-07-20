@@ -57,7 +57,7 @@ const Form2 = () => {
     //         checkemail()         
     // }
   return (
-    <div className='container mt-5'>
+    <div className='mt-5'>
         <div className="row">
             <div className="col">
                     <img src ={Image1} className='img-fluid'/>

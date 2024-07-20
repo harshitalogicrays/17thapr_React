@@ -1,0 +1,28 @@
+1.inline css - 
+<h2 style={{color:'beige',backgroundColor:'GrayText'}}>Welcome to LRA</h2>
+
+
+2.css variable -
+let cssvar = {color:'beige',backgroundColor:'GrayText'}
+
+<h2 style={cssvar}></h2>
+ 
+3.css file -
+import 'path' 
+
+All the children compoents of the compoents where you have imported css file can access css file directly without import .
+
+parent compoents (import css)===> children compoents (Can access CSS without import )
+
+4.css module file - .module.css
+import cssvar from 'path'
+
+5. bootstrap 
+6. react bootstrap - CSS compoents <Container></Container>
+7. styled-components  - can create our own css components
+
+
+==============================================================
+styled-components
+react-hook-form - form validations 
+lifting the state up 

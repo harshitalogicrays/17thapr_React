@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Firstclasscomp from "./components/01day/Firstclasscomp";
 import Firstfunctionalcomp from './components/01day/Firstclasscomp'
 import Propsdemoinfun from "./components/01day/Propsdemoinfun";
@@ -10,13 +10,14 @@ import StateDemo from "./components/03day/StateDemo";
 import TextBoxDemo from "./components/03day/TextBoxDemo";
 import Form1 from "./components/04day/Form1";
 import Form2 from "./components/04day/Form2";
-
+import './App.css'
+import cssmodule from './App.module.css'
 
 function App() {
   return (
-    <div className="container mt-5">
-        <h1 className="text-danger">Hello React</h1>
-        <h2 style={{color:'beige',backgroundColor:'GrayText'}}>Welcome to LRA</h2>
+    <>
+        {/* <h1 className="text-danger">Hello React</h1>
+        <h2 style={{color:'beige',backgroundColor:'GrayText'}}>Welcome to LRA</h2> */}
         {/* <hr></hr>
         <Firstfunctionalcomp/><hr/>
         <Firstclasscomp/> */}
@@ -42,8 +43,13 @@ function App() {
             {/* <Form1/> */}
             {/* <Form2/>     */}
 
+          <Link type="button"  class="btn btn-primary me-2" to='/fun'> 
+          <span className={cssmodule.App1}>Functional component Concepts</span>
+          </Link>
+          <button type="button"  class="btn btn-danger"> class component Concepts
+          </button>          
             <Outlet/>
-    </div>
+    </>
   )
 }
 
