@@ -8,6 +8,8 @@ import Pagenotfound from './components/05day/Pagenotfound'
 import FunctionLayout from './components/06day/FunctionLayout'
 import ListRendering from './components/06day/ListRendering'
 import Products from './components/06day/Products'
+import StyledCompDemo from './components/07day/StyledCompDemo'
+import UseCustomComp from './components/07day/UseCustomComp'
 
 const Routing = () => {
   return (
@@ -20,6 +22,8 @@ const Routing = () => {
                       <Route path='statedemo' element={<StateDemo/>}/>
                       <Route path='list' element={<ListRendering/>}/>
                       <Route path='products' element={<Products/>}/>
+                      <Route path='styled' element={<StyledCompDemo/>}/>
+                      <Route path='customcomp' element={<UseCustomComp/>}/>
                   </Route>                 
                 </Route>
 

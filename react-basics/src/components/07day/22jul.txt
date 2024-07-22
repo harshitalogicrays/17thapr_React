@@ -1,0 +1,14 @@
+styled-components -
+custom components -
+
+type , id, name, class,placeholder,style, required,readonly,onChange,onBlur
+
+icon group  -> append or prepend 
+
+==================================================================
+lifting the state up  - 
+react-hook-form - form validations 
+
+=====================================================================
+
+
