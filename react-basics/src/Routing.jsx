@@ -10,6 +10,8 @@ import ListRendering from './components/06day/ListRendering'
 import Products from './components/06day/Products'
 import StyledCompDemo from './components/07day/StyledCompDemo'
 import UseCustomComp from './components/07day/UseCustomComp'
+import ReactHookForm from './components/08day/ReactHookForm'
+import Counter1 from './components/08day/Counter1'
 
 const Routing = () => {
   return (
@@ -24,6 +26,8 @@ const Routing = () => {
                       <Route path='products' element={<Products/>}/>
                       <Route path='styled' element={<StyledCompDemo/>}/>
                       <Route path='customcomp' element={<UseCustomComp/>}/>
+                      <Route path='hookform' element={<ReactHookForm/>}/>
+                      <Route path='liftingthestateup' element={<Counter1/>}/>
                   </Route>                 
                 </Route>
 

@@ -1,0 +1,11 @@
+formik library  - useFormik 
+
+react hook form  - useForm
+
+====================================================
+lifting the state up - 
+=============================================================
+useCallback 
+useMemo 
+useEffect 
+useRef 

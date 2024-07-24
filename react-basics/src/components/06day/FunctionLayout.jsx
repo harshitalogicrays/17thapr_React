@@ -29,6 +29,12 @@ const FunctionLayout = () => {
         <li class="nav-item">
             <Link class="nav-link" to='/fun/customcomp'>Custom Component</Link>
         </li>
+        <li class="nav-item">
+            <Link class="nav-link" to='/fun/hookform'>React Hook Form</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link" to='/fun/liftingthestateup'>liftingthestateup</Link>
+        </li>
     </ul></div>
     <div className="col"><Outlet/></div>
  </div>
