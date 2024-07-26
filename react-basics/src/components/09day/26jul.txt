@@ -1,0 +1,14 @@
+Password Generator - 
+useRef -  hold the reference of the element 
+return current property 
+
+docuemnt.getElementById('abc')
+
+const myRef=useRef()
+myRef.current 
+
+=====================================================================================
+Ref - 
+useMemo 
+==================
+class component 

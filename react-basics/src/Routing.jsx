@@ -12,6 +12,7 @@ import StyledCompDemo from './components/07day/StyledCompDemo'
 import UseCustomComp from './components/07day/UseCustomComp'
 import ReactHookForm from './components/08day/ReactHookForm'
 import Counter1 from './components/08day/Counter1'
+import PasswordGenerator from './components/09day/PasswordGenerator'
 
 const Routing = () => {
   return (
@@ -28,6 +29,7 @@ const Routing = () => {
                       <Route path='customcomp' element={<UseCustomComp/>}/>
                       <Route path='hookform' element={<ReactHookForm/>}/>
                       <Route path='liftingthestateup' element={<Counter1/>}/>
+                      <Route path='password' element={<PasswordGenerator/>}/>
                   </Route>                 
                 </Route>
 

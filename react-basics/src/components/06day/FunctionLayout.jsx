@@ -35,6 +35,9 @@ const FunctionLayout = () => {
         <li class="nav-item">
             <Link class="nav-link" to='/fun/liftingthestateup'>liftingthestateup</Link>
         </li>
+        <li class="nav-item">
+            <Link class="nav-link" to='/fun/password'>useEffect, UseCallback and useRef Demo</Link>
+        </li>
     </ul></div>
     <div className="col"><Outlet/></div>
  </div>
