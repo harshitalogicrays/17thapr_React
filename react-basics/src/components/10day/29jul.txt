@@ -1,0 +1,30 @@
+forms -
+1. controlled  - React manages it (state and onChange)
+2. uncontrolled - DOM itself manages it (ref)
+
+uncontrolled component - 
+ref - reference
+ref -returns a current property
+
+
+state vs ref -
+state - variable , let a  declare and init.
+ref - reference  - document.getElementById('aa') 
+current property
+funcitonal  - useRef hook
+class - ref create 
+ex-  select textbox data 
+    fetch textbox data 
+    focus on the element 
+    apply some style 
+    everything which we can do using javascript 
+
+useMemo - 
+=================================================================================
+1. class - statefull 
+2. function  - hooks 
+
+class component - 
+state,form, props, event , ref,  component life cycle 
+
+PureComponent 

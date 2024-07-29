@@ -13,6 +13,8 @@ import UseCustomComp from './components/07day/UseCustomComp'
 import ReactHookForm from './components/08day/ReactHookForm'
 import Counter1 from './components/08day/Counter1'
 import PasswordGenerator from './components/09day/PasswordGenerator'
+import Refdemo from './components/10day/Refdemo'
+import UseMemoDemo from './components/10day/UseMemoDemo'
 
 const Routing = () => {
   return (
@@ -30,6 +32,8 @@ const Routing = () => {
                       <Route path='hookform' element={<ReactHookForm/>}/>
                       <Route path='liftingthestateup' element={<Counter1/>}/>
                       <Route path='password' element={<PasswordGenerator/>}/>
+                      <Route path='refdemo' element={<Refdemo/>}/>
+                      <Route path='usememo' element={<UseMemoDemo/>}/>
                   </Route>                 
                 </Route>
 
