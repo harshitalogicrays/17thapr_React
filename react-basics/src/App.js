@@ -46,8 +46,8 @@ function App() {
           <Link type="button"  class="btn btn-primary me-2" to='/fun'> 
           <span className={cssmodule.App1}>Functional component Concepts</span>
           </Link>
-          <button type="button"  class="btn btn-danger"> class component Concepts
-          </button>          
+          <Link type="button" to='/class'  class="btn btn-danger"> class component Concepts
+          </Link>          
             <Outlet/>
     </>
   )

@@ -15,6 +15,10 @@ import Counter1 from './components/08day/Counter1'
 import PasswordGenerator from './components/09day/PasswordGenerator'
 import Refdemo from './components/10day/Refdemo'
 import UseMemoDemo from './components/10day/UseMemoDemo'
+import ClassRouting from './components/11day/ClassRouting'
+import ClassPropsEventandState from './components/11day/ClassPropsEventandState'
+import Stateinclass from './components/11day/Stateinclass'
+import Forminclass from './components/11day/Forminclass'
 
 const Routing = () => {
   return (
@@ -34,7 +38,12 @@ const Routing = () => {
                       <Route path='password' element={<PasswordGenerator/>}/>
                       <Route path='refdemo' element={<Refdemo/>}/>
                       <Route path='usememo' element={<UseMemoDemo/>}/>
-                  </Route>                 
+                  </Route>  
+                  <Route path='class' element={<ClassRouting/>}>
+                      <Route path='propevent' element={<ClassPropsEventandState username="binjal" isActive={true}><p>child</p></ClassPropsEventandState>}/>
+                      <Route path='state' element={<Stateinclass name="State Demo"/>}/>
+                      <Route path='form' element={<Forminclass/>}/>
+                  </Route>                                    
                 </Route>
 
                 <Route path="*" element={<Pagenotfound/>}/>
