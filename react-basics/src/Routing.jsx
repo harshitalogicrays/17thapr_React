@@ -19,6 +19,7 @@ import ClassRouting from './components/11day/ClassRouting'
 import ClassPropsEventandState from './components/11day/ClassPropsEventandState'
 import Stateinclass from './components/11day/Stateinclass'
 import Forminclass from './components/11day/Forminclass'
+import Refinclass from './components/12day/Refinclass'
 
 const Routing = () => {
   return (
@@ -43,6 +44,7 @@ const Routing = () => {
                       <Route path='propevent' element={<ClassPropsEventandState username="binjal" isActive={true}><p>child</p></ClassPropsEventandState>}/>
                       <Route path='state' element={<Stateinclass name="State Demo"/>}/>
                       <Route path='form' element={<Forminclass/>}/>
+                      <Route path='ref' element={<Refinclass/>}/>
                   </Route>                                    
                 </Route>
 

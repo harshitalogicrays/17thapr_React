@@ -17,6 +17,9 @@ const ClassRouting = () => {
         <li class="nav-item">
             <Link class="nav-link" aria-current="page" to='/class/form'>Form demo</Link>
         </li>
+        <li class="nav-item">
+            <Link class="nav-link" aria-current="page" to='/class/ref'>ref demo</Link>
+        </li>
     </ul></div>
     <div className="col"><Outlet/></div>
  </div>
