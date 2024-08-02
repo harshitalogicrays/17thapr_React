@@ -20,6 +20,8 @@ import ClassPropsEventandState from './components/11day/ClassPropsEventandState'
 import Stateinclass from './components/11day/Stateinclass'
 import Forminclass from './components/11day/Forminclass'
 import Refinclass from './components/12day/Refinclass'
+import ComponentLifeCycle from './components/13day/ComponentLifeCycle'
+import Purecomp from './components/13day/Purecomp'
 
 const Routing = () => {
   return (
@@ -45,6 +47,8 @@ const Routing = () => {
                       <Route path='state' element={<Stateinclass name="State Demo"/>}/>
                       <Route path='form' element={<Forminclass/>}/>
                       <Route path='ref' element={<Refinclass/>}/>
+                      <Route path='lifecycle' element={<ComponentLifeCycle/>}/>
+                      <Route path='pure' element={<Purecomp/>}/>
                   </Route>                                    
                 </Route>
 

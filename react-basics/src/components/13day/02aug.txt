@@ -1,0 +1,6 @@
+
+context  -  
+3rd party state mgmt. tools - redux 
+
+
+context - to overcome the problem of prop drilling 
