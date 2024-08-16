@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "f463",
+      "username": "Ram",
+      "email": "ram@gmail.com",
+      "password": "ram123",
+      "cpassword": "ram123",
+      "role": "1",
+      "createdAt": 1723802351197
+    },
+    {
+      "id": "9f9a",
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "cpassword": "admin123",
+      "role": "0",
+      "createdAt": "2024-08-16T10:00:03.758Z"
+    },
+    {
+      "id": "efa3",
+      "username": "aaa",
+      "email": "aaa@gmail.com",
+      "password": "aaa123",
+      "cpassword": "aaa123",
+      "role": "1",
+      "createdAt": "2024-08-16T10:06:11.933Z"
+    },
+    {
+      "id": "2538",
+      "username": "happy",
+      "email": "happy@gmail.com",
+      "password": "happy123",
+      "cpassword": "happy123",
+      "role": "1",
+      "createdAt": "2024-08-16T10:07:52.681Z"
+    }
+  ],
+  "products": [],
+  "orders": []
+}
