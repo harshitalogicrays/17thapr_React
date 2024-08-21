@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { ShowOnLogin, ShowOnLogout } from './hiddenlinks';
 const Header = () => {
+  const redirect =useNavigate()
     let styles=({ isActive}) => {
         return {
           fontWeight: isActive ? "bold" : "",
@@ -11,6 +14,20 @@ const Header = () => {
          backgroundColor:isActive?'aqua':'',
         };
       }
+
+      let handleLogout=()=>{
+        sessionStorage.removeItem('17aprlogin')
+        toast.success("loggedOut Successfully")
+        redirect('/')
+      }
+
+      let [username,setUsername]=useState('Guest')
+      useEffect(()=>{
+        if(sessionStorage.getItem('17aprlogin') != undefined){
+          let obj=JSON.parse(sessionStorage.getItem('17aprlogin'))
+          setUsername(obj.name)
+        }
+      },[sessionStorage.getItem('17aprlogin')])
   return (
    <>
        <Navbar expand="lg"  bg="dark" data-bs-theme="dark">
@@ -26,8 +43,14 @@ const Header = () => {
               style={styles}>Products</Nav.Link>
         </Nav>
         <Nav>
+          <ShowOnLogout>
             <Nav.Link as={NavLink} to='/login'  style={styles}>Login</Nav.Link>
             <Nav.Link as={NavLink} to='/register'  style={styles}>Register</Nav.Link>
+          </ShowOnLogout>
+          <ShowOnLogin>
+              <Nav.Link>Welcome {username}</Nav.Link>
+              <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+            </ShowOnLogin>
         </Nav>
         </Navbar.Collapse>
       </Container>

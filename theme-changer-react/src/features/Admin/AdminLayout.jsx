@@ -1,13 +1,11 @@
-import { Outlet } from "react-router-dom"
-import Header from "./features/Header"
-import { Container } from "react-bootstrap"
+import React from 'react'
+import { Outlet } from 'react-router-dom'
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
-  console.log(import.meta.env.VITE_URL)
-   return (
-    <>
+const AdminLayout = () => {
+  return (
+   <>
     <ToastContainer
     position="bottom-left"
     autoClose={2000}
@@ -20,10 +18,9 @@ function App() {
     pauseOnHover={false}
     theme="colored"
     />
-    <Header/>
-        <Outlet/>   
-    </>
+    <Outlet/>
+   </>
   )
 }
 
-export default App
+export default AdminLayout

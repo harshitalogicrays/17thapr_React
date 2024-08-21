@@ -15,8 +15,11 @@ const Login = () => {
             if(result.length==0){toast.error("Invalid Credentials")}
             else {
                 if(result[0].password == data.password){
+                    let obj = {isLoggedIn:true,email:data.email,name:result[0].username,role:result[0].role}
+                    sessionStorage.setItem("17aprlogin",JSON.stringify(obj))
                     toast.success("LoggedIn Successfully")
-                    redirect('/')
+                    if(result[0].role=='1') redirect('/')
+                    else if(result[0].role=='0') redirect('/admin')
                 }
                 else toast.error("Invalid Credentials")
             }
