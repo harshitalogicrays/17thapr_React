@@ -1,15 +1,6 @@
 {
   "users": [
     {
-      "id": "f463",
-      "username": "Ram",
-      "email": "ram@gmail.com",
-      "password": "ram123",
-      "cpassword": "ram123",
-      "role": "1",
-      "createdAt": 1723802351197
-    },
-    {
       "id": "9f9a",
       "username": "Admin",
       "email": "admin@gmail.com",
@@ -38,5 +29,29 @@
     }
   ],
   "products": [],
-  "orders": []
+  "orders": [],
+  "categories": [
+    {
+      "id": "6df9",
+      "name": "cloths",
+      "desc": "jsksfjkwjr",
+      "isActive": true,
+      "createdAt": "2024-08-23T09:55:10.579Z"
+    },
+    {
+      "id": "7fcc",
+      "name": "electronics",
+      "desc": "jnkjkjkj",
+      "isActive": true,
+      "createdAt": "2024-08-23T09:55:33.275Z"
+    },
+    {
+      "id": "abc6",
+      "name": "jewellary",
+      "desc": ",jhj",
+      "isActive": true,
+      "createdAt": "2024-08-23T09:55:48.170Z"
+    }
+  ],
+  "sliders": []
 }
