@@ -1,19 +1,15 @@
-import React from 'react'
-import Image1 from  '/src/assets/images/a.jpg'
-import Image2 from  '/src/assets/images/b.jpg'
-import Image3 from  '/src/assets/images/c.jpeg'
-import Image4 from  '/src/assets/images/d.jpg'
-import Image5 from  '/src/assets/images/chair.jpg'
-import Image6 from  '/src/assets/images/chair2.png'
+import React, { useEffect, useState } from 'react'
 const Slider = () => {
-  let sliders = [
-    {id:1,image:Image1,title:'image1',desc:'image1 desc'},
-    {id:2,image:Image2,title:'image2',desc:'image2 desc'},
-    {id:3,image:Image3,title:'image3',desc:'image3 desc'},
-    {id:4,image:Image4,title:'image4',desc:'image4 desc'},
-    {id:5,image:Image5,title:'image5',desc:'image5 desc'},
-    {id:6,image:Image6,title:'image6',desc:'image6 desc'}
-  ]
+  let [sliders,setSliders]=useState([])
+  let getSliders =async()=>{
+    try{
+      let res = await fetch(`${import.meta.env.VITE_URL}/sliders`)
+      let data=await res.json()
+      let filter = data.filter(item=>item.isActive)
+      setSliders(filter)  }
+    catch(err){ toast.error(err.message)  }}
+
+  useEffect(()=>{ getSliders() },[])
   return (
     <>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">

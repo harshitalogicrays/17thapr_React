@@ -31,8 +31,10 @@ export const myrouter = createBrowserRouter([
             {path:'edit/category/:id',element:<AddCategory/>},
             {path:'view/category',element:<ViewCategory/>},
             {path:'add/slider',element:<AddSlider/>},
+            {path:'edit/slider/:id',element:<AddSlider/>},
             {path:'view/slider',element:<ViewSlider/>},
             {path:'add/product',element:<AddProduct/>},
+            {path:'edit/product/:id',element:<AddProduct/>},
             {path:'view/product',element:<ViewProduct/>},
         ]
     },
