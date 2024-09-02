@@ -5,7 +5,11 @@ import Nav from 'react-bootstrap/Nav';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ShowOnLogin, ShowOnLogout } from './hiddenlinks';
+import ThemeBtn from './themeBtn';
+import { FaShoppingCart } from 'react-icons/fa';
+import { useMyContext } from './CartContext';
 const Header = () => {
+  const {cartItems} = useMyContext()
   const redirect =useNavigate()
     let styles=({ isActive}) => {
         return {
@@ -42,7 +46,12 @@ const Header = () => {
             <Nav.Link as={NavLink} to='/products' 
               style={styles}>Products</Nav.Link>
         </Nav>
+        <ThemeBtn/>
         <Nav>
+        <Nav.Link as={NavLink} to='/cart'  style={styles}><FaShoppingCart size={30}/>
+          <span class="badge rounded-pill text-bg-danger">{cartItems.length}</span>
+          
+        </Nav.Link>
           <ShowOnLogout>
             <Nav.Link as={NavLink} to='/login'  style={styles}>Login</Nav.Link>
             <Nav.Link as={NavLink} to='/register'  style={styles}>Register</Nav.Link>
@@ -52,6 +61,7 @@ const Header = () => {
               <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
             </ShowOnLogin>
         </Nav>
+      
         </Navbar.Collapse>
       </Container>
     </Navbar>

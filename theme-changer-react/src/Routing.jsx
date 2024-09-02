@@ -14,14 +14,18 @@ import AddSlider from './features/Admin/AddSlider';
 import ViewSlider from './features/Admin/ViewSlider';
 import AddProduct from './features/Admin/AddProduct';
 import ViewProduct from './features/Admin/ViewProduct';
+import Theme from './features/Theme';
+import Cart from './features/Cart';
+import CartContext from './features/CartContext';
 
 export const myrouter = createBrowserRouter([
-    {path:'/' ,element:<App/>,
+    {path:'/' ,element:<Theme><CartContext><App/></CartContext></Theme>,
     children:[
         {path:'',element:<Home/>},
         {path:'register',element:<Register/>},
         {path:'login',element:<Login/>},
-        {path:'products',element:<Protected><Products/></Protected>},
+        {path:'products',element:<Products/>},
+        {path:'cart',element:<Protected><Cart/></Protected>},
     ]},
 
     {path:'/admin',element:<ProtectedAdmin><AdminLayout/></ProtectedAdmin>,
