@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Container, Form } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import Loader from '../features/Loader'
 
 const Login = () => {
     const redirect=useNavigate()
+    let [isLoading,setIsLoading]=useState(false)
   const {register,handleSubmit, formState: { errors } ,trigger}=useForm()
   let handleForm=async(data)=>{ 
+    setIsLoading(true)
     try{
             let res = await fetch(`${import.meta.env.VITE_URL}/users?email=${data.email}`)
             let result = await res.json()
@@ -20,15 +23,21 @@ const Login = () => {
                     toast.success("LoggedIn Successfully")
                     if(result[0].role=='1') redirect('/')
                     else if(result[0].role=='0') redirect('/admin')
+                    setIsLoading(false)
                 }
-                else toast.error("Invalid Credentials")
+                else {toast.error("Invalid Credentials");   setIsLoading(false)}
             }
     }
     catch(err){
         toast.error(err.message)
+        setIsLoading(false)
     }
    }
-return ( <Container className='col-6 mt-5 shadow p-3'>
+return ( 
+<>
+{isLoading && <Loader/>}
+
+<Container className='col-6 mt-5 shadow p-3'>
       <Form  onSubmit={handleSubmit(handleForm)}>
           <Form.Group className='mb-3'>
               <Form.Label>Email</Form.Label>
@@ -47,6 +56,7 @@ return ( <Container className='col-6 mt-5 shadow p-3'>
           <p>Create an account?? <Link to='/register'>Signup</Link></p>
       </Form>
  </Container>
+ </>
   )
 }
 
