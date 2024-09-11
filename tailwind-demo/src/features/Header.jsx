@@ -1,18 +1,15 @@
 import React from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, BellIcon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     const navigation = [
-        { name: 'Dashboard', href: '#', current: true },
-        { name: 'Team', href: '#', current: false },
-        { name: 'Projects', href: '#', current: false },
-        { name: 'Calendar', href: '#', current: false },
+        { name: 'Home', href: '/'},
+        { name: 'About', href: '/about' },
+        { name: 'Products', href: '/products'},  
       ]
       
-      function classNames(...classes) {
-        return classes.filter(Boolean).join(' ')
-      }
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto  px-2 sm:px-6 lg:px-8">
@@ -35,29 +32,40 @@ const Header = () => {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
-                    )}
+                    to={item.href}
+                    className={({ isActive }) =>
+                       isActive ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' :  'text-gray-300 hover:bg-yellow-500 hover:text-red-800 rounded-md px-3 py-2 text-sm font-medium'
+                    }
+                   
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+          <NavLink  to="/register"
+        className={({ isActive }) =>
+                       isActive ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' :  'text-gray-300 hover:bg-yellow-500 hover:text-red-800 rounded-md px-3 py-2 text-sm font-medium'
+                    }   > Register </NavLink>
+  <NavLink  to="/login"
+        className={({ isActive }) =>
+                       isActive ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' :  'text-gray-300 hover:bg-yellow-500 hover:text-red-800 rounded-md px-3 py-2 text-sm font-medium'
+                    }   > Login </NavLink>
+
             <button
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="h-6 w-6" />
+              <ShoppingCartIcon aria-hidden="true" className="h-9 w-9" />
+              <span className="absolute -top-1 -right-2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-600 rounded-full " > 
+                0 </span>
+        
             </button>
 
             {/* Profile dropdown */}
@@ -103,14 +111,13 @@ const Header = () => {
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
-              as="a"
-              href={item.href}
+              as={NavLink}
+              to={item.href}
               aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
-            >
+              className={({ isActive }) =>
+                isActive ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' :  'text-gray-300 hover:bg-yellow-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'
+             }
+                     >
               {item.name}
             </DisclosureButton>
           ))}
