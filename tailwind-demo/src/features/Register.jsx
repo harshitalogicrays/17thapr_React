@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { ADD_USER } from '../redux/userSlice'
+import { Link, useNavigate } from 'react-router-dom'
+import { addUserToAPI } from '../redux/userSlice'
 
 const Register = () => {
+  const navigate=useNavigate()
   const dispatch = useDispatch()
   const [user,setUser]=useState({username:'',email:'',password:'',cpassword:''})
   let handleSubmit=(e)=>{
     e.preventDefault()
-    dispatch(ADD_USER(user))
+    // dispatch(ADD_USER(user))
+    dispatch(addUserToAPI(user))
+    navigate('/')
   }
   return (
     <>
