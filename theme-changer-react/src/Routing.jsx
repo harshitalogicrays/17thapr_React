@@ -17,9 +17,12 @@ import ViewProduct from './features/Admin/ViewProduct';
 import Theme from './features/Theme';
 import Cart from './features/Cart';
 import CartContext from './features/CartContext';
+import { fetchData } from './features/loaderproductapi';
 
 export const myrouter = createBrowserRouter([
     {path:'/' ,element:<Theme><CartContext><App/></CartContext></Theme>,
+    loader:fetchData,
+    errorElement:<Pagenotfound/>,
     children:[
         {path:'',element:<Home/>},
         {path:'register',element:<Register/>},

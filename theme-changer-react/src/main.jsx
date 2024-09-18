@@ -6,7 +6,11 @@ import 'bootstrap/dist/js/bootstrap.js'
 import { RouterProvider } from 'react-router-dom'
 import { myrouter } from './Routing.jsx'
 import './index.css'
+import { Provider } from 'react-redux'
+import store from './redux/store.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- <RouterProvider router={myrouter}/>,
+    <Provider store={store}>
+    <RouterProvider router={myrouter}/>
+    </Provider>,
 )

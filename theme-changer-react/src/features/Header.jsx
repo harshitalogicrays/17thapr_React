@@ -8,7 +8,10 @@ import { ShowOnLogin, ShowOnLogout } from './hiddenlinks';
 import ThemeBtn from './themeBtn';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useMyContext } from './CartContext';
-const Header = () => {
+import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { FILTER_BY_SEARCH } from '../redux/filterSlice';
+const Header = ({products=[]}) => {
   const {cartItems} = useMyContext()
   const redirect =useNavigate()
     let styles=({ isActive}) => {
@@ -32,6 +35,13 @@ const Header = () => {
           setUsername(obj.name)
         }
       },[sessionStorage.getItem('17aprlogin')])
+
+      //search
+      let [search,setSearch]=useState('')
+      const dispatch = useDispatch()
+      useEffect(()=>{
+        dispatch(FILTER_BY_SEARCH({products,search}))
+      },[search])
   return (
    <>
        <Navbar expand="lg"  bg="dark" data-bs-theme="dark">
@@ -46,6 +56,16 @@ const Header = () => {
             <Nav.Link as={NavLink} to='/products' 
               style={styles}>Products</Nav.Link>
         </Nav>
+
+        <Form inline className='me-2'>
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              value={search}
+              onChange={(e)=>setSearch(e.target.value)}
+            />
+      </Form>
+
         <ThemeBtn/>
         <Nav>
         <Nav.Link as={NavLink} to='/cart'  style={styles}><FaShoppingCart size={30}/>
